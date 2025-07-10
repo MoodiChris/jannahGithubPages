@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>جنة (Jannah) - Islamic Prayer Tracker</title>
+
+        <!-- Arabic Font Support -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Meta tags for Islamic app -->
+        <meta
+            name="description"
+            content="Jannah - Track your daily Islamic prayers with visual progress and streak counters. Build consistent spiritual habits."
+        />
+        <meta
+            name="keywords"
+            content="Islamic prayer tracker, daily prayers, habit tracker, spiritual progress, Islamic app"
+        />
+        <meta name="author" content="Jannah Team" />
+
+        <!-- Favicon and app icons -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#008B8B" />
+        <meta name="color-scheme" content="light" />
+
+        <!-- Open Graph for social sharing -->
+        <meta
+            property="og:title"
+            content="جنة (Jannah) - Islamic Prayer Tracker"
+        />
+        <meta
+            property="og:description"
+            content="Track your daily Islamic prayers with visual progress and build consistent spiritual habits."
+        />
+        <meta property="og:type" content="website" />
+
+        <!-- Responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="/manifest.json" />
+
+        <style>
+            /* Loading screen styles */
+            .loading-screen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #008b8b 0%, #20b2aa 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                color: white;
+                font-family: "Inter", sans-serif;
+            }
+
+            .loading-text {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                animation: fadeInOut 2s ease-in-out infinite;
+            }
+
+            .loading-spinner {
+                width: 40px;
+                height: 40px;
+                border: 4px solid rgba(255, 255, 255, 0.3);
+                border-top: 4px solid white;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes fadeInOut {
+                0%,
+                100% {
+                    opacity: 0.7;
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            /* Hide loading screen when app loads */
+            .app-loaded .loading-screen {
+                display: none;
+            }
+        </style>
+      <script type="module" crossorigin src="/assets/index-68035b2a.js"></script>
+      <link rel="stylesheet" href="/assets/index-6c38a1fd.css">
+    </head>
+    <body class="bg-islamic-warm-gray">
+        <!-- Loading Screen -->
+        <div class="loading-screen">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">جنة (Jannah)</div>
+            <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem">
+                Loading your spiritual journey...
+            </div>
+        </div>
+
+        <!-- React App Root -->
+        <div id="root"></div>
+
+        <!-- Main App Script -->
+        
+
+        <!-- Remove loading screen when app loads -->
+        <script>
+            window.addEventListener("load", function () {
+                setTimeout(() => {
+                    document.body.classList.add("app-loaded");
+                }, 500);
+            });
+        </script>
+    </body>
+</html>
